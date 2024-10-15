@@ -1,0 +1,38 @@
+---
+const { title, url, foto } = Astro.props;
+---
+
+<!--<style>
+  #bg-foto {
+    background-image: linear-gradient(0deg, white, white);
+    transition: background-image 1s;
+  }
+  #bg-foto:hover {
+    background-image: url(/isosceles.webp);
+  }
+</style> -->
+<div class="relative h-full w-full group">
+  <a href={url} class="block w-full h-full relative">
+    <!-- Imagen de fondo -->
+    <img
+      src={foto}
+      alt="Isosceles Global SL"
+      class="absolute inset-0 w-full h-full object-cover lg:opacity-0 lg:group-hover:opacity-60 lg:transition-opacity lg:duration-300 lg:ease-in"
+    />
+
+    <!-- Superposición negra al hacer hover -->
+    <div
+      class="absolute inset-0 bg-black opacity-50 lg:opacity-0 lg:group-hover:opacity-60 transition-opacity duration-300 ease-in"
+    >
+    </div>
+
+    <!-- Contenido del texto -->
+    <div class="relative z-10 flex justify-center items-center w-full h-full">
+      <h2
+        class="w-2/3 text-center uppercase font-bold lg:text-2xl xl:text-3xl transition-colors duration-300 ease-in text-white lg:text-black lg:group-hover:text-white"
+      >
+        {title}
+      </h2>
+    </div>
+  </a>
+</div>

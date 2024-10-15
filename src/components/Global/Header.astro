@@ -1,0 +1,41 @@
+---
+import { Icon } from 'astro-icon/components';
+---
+
+<header>
+  <nav>
+    <div
+      class="flex justify-between items-center py-4 px-8 xl:px-14 text-xs xl:text-sm"
+    >
+      <div>
+        <a href="/"
+          ><img
+            src="/favicon.svg"
+            alt="Logo Isosceles Global"
+            class="size-10"
+          /></a
+        >
+      </div>
+      <ul class="font-bold hidden lg:flex list-none gap-4 xl:gap-12">
+        <li><a href="/quienes-somos/">¿Quiénes somos?</a></li>
+        <li>
+          <a href="/rehabilitacion-reformas/">Rehabilitación y reformas</a>
+        </li>
+        <li><a href="/obra-nueva/">Obra nueva</a></li>
+        <li><a href="/servicios/">Servicios</a></li>
+        <li><a href="/contacto/">Contacto</a></li>
+        <li><a href="/trabaja-nosotros/">Trabaja con nosotros</a></li>
+      </ul>
+      <div
+        class="lg:flex hidden bg-blue-900 py-3 px-6 text-white font-bold gap-2"
+      >
+        <Icon name="ic:baseline-phone" class="size-4 xl:size-5" />
+        <a href="tel:+34636857842" class="">+34 636 857 842</a>
+      </div>
+      <div class="lg:hidden">
+        <Icon name="ic:baseline-menu" class="size-10" />
+      </div>
+    </div>
+    <slot />
+  </nav>
+</header>
