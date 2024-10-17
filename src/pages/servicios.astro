@@ -1,7 +1,113 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Service from '../components/Services/Service.astro';
+import CallToAction from '../components/Global/CallToAction.astro';
 ---
 
 <Layout title="Servicios - Isósceles Global SL">
-  <h1>Servicios</h1>
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="bg-blue-950 text-white py-8">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl font-bold">Nuestros servicios</h1>
+        <p class="mt-2 text-lg">
+          Ofrecemos una amplia gama de servicios para satisfacer todas tus
+          necesidades de construcción y reformas.
+        </p>
+      </div>
+    </header>
+
+    <!-- Servicios -->
+    <Service
+      title="Rehabilitación y reforma"
+      description="Ofrecemos servicios integrales de rehabilitación y reforma para transformar y modernizar cualquier tipo de espacio, ya sea residencial, comercial o industrial. Nuestro equipo de expertos se encarga de cada detalle, desde la planificación inicial hasta la ejecución final, asegurando resultados que combinan funcionalidad, estética y durabilidad. Ya sea para renovar un hogar antiguo, modernizar una oficina o restaurar un edificio histórico, garantizamos calidad y eficiencia en cada proyecto."
+      imageSrc="/images/rehabilitacion.webp"
+      imageAlt="Rehabilitación y reforma"
+      reverse={false}
+      id="rehabilitacion"
+    />
+
+    <Service
+      title="Obra nueva"
+      description="Especialistas en la construcción de obra nueva, nos encargamos de gestionar cada fase del proyecto, desde el diseño arquitectónico hasta la entrega final. Contamos con un equipo multidisciplinario que asegura que cada etapa se cumpla con los más altos estándares de calidad, integrando tecnología innovadora y materiales sostenibles. Nuestro compromiso es entregar espacios funcionales, modernos y adaptados a las necesidades específicas de cada cliente."
+      imageSrc="/images/obra-nueva.webp"
+      imageAlt="Obra nueva"
+      reverse={true}
+      id="obra-nueva"
+    />
+
+    <Service
+      title="Fontanería"
+      description="Realizamos instalaciones y mantenimientos de sistemas de fontanería para proyectos residenciales, comerciales e industriales. Desde la instalación de nuevas redes de suministro de agua y drenaje hasta reparaciones y mantenimiento preventivo, ofrecemos soluciones que garantizan durabilidad, eficiencia y ahorro energético. Utilizamos materiales de alta calidad y tecnología avanzada para asegurar la máxima satisfacción de nuestros clientes."
+      imageSrc="/images/fontaneria.webp"
+      imageAlt="Fontanería"
+      reverse={false}
+      id="fontaneria"
+    />
+
+    <Service
+      title="Impermeabilización y fachadas"
+      description="Protegemos edificios contra la humedad y las inclemencias del tiempo mediante soluciones avanzadas de impermeabilización y mantenimiento de fachadas. Nuestros servicios incluyen desde el sellado de superficies hasta la aplicación de recubrimientos especializados, asegurando la conservación y la durabilidad de las estructuras. Mejoramos la eficiencia energética y estética de los edificios, prolongando su vida útil con técnicas innovadoras y sostenibles."
+      imageSrc="/images/impermeabilizacion.webp"
+      imageAlt="Impermeabilización y fachadas"
+      reverse={true}
+      id="impermeabilizacion"
+    />
+
+    <Service
+      title="Pintura"
+      description="Ofrecemos servicios de pintura profesional para interiores y exteriores, adaptándonos a las necesidades y gustos de cada cliente. Utilizamos productos de alta calidad y técnicas avanzadas para asegurar acabados impecables y duraderos. Ya sea para renovar la apariencia de un hogar, mejorar la imagen de una oficina o darle un toque único a un espacio comercial, garantizamos resultados que resisten el paso del tiempo."
+      imageSrc="/images/pintura.webp"
+      imageAlt="Pintura"
+      reverse={false}
+      id="pintura"
+    />
+
+    <Service
+      title="Carpintería"
+      description="Nuestra carpintería a medida abarca todo tipo de proyectos de interiorismo, desde muebles y estanterías hasta puertas y ventanas. Diseñamos y fabricamos piezas que combinan funcionalidad y estética, adaptándonos a las necesidades de cada cliente. Con una atención meticulosa al detalle y utilizando materiales de primera calidad, creamos soluciones únicas que transforman cualquier espacio."
+      imageSrc="/images/carpinteria.webp"
+      imageAlt="Carpintería"
+      reverse={true}
+      id="carpinteria"
+    />
+
+    <Service
+      title="Carpintería Metálica"
+      description="Ofrecemos servicios especializados en carpintería metálica, incluyendo estructuras de acero, aluminio y otros metales para todo tipo de construcciones. Diseñamos e instalamos cerramientos, barandillas, escaleras y otras soluciones metálicas que aportan robustez y estilo a cualquier proyecto. Nuestra experiencia nos permite trabajar tanto en grandes estructuras industriales como en detalles arquitectónicos personalizados."
+      imageSrc="/images/carpinteria-metalica.webp"
+      imageAlt="Carpintería Metálica"
+      reverse={false}
+      id="carpinteria-metalica"
+    />
+
+    <Service
+      title="Electricidad"
+      description="Especialistas en instalaciones eléctricas, realizamos desde pequeñas reparaciones hasta proyectos completos de cableado para edificios residenciales, comerciales e industriales. Nuestros servicios incluyen instalaciones de iluminación, sistemas de seguridad, redes de datos y automatización. Garantizamos soluciones seguras, eficientes y adaptadas a las últimas normativas y tecnologías del sector eléctrico."
+      imageSrc="/images/electricidad.webp"
+      imageAlt="Electricidad"
+      reverse={true}
+      id="electricidad"
+    />
+
+    <Service
+      title="Comunidades"
+      description="Ofrecemos servicios de mantenimiento, reparación y reformas para comunidades de vecinos, asegurando que todas las áreas comunes se mantengan en óptimas condiciones. Realizamos trabajos de albañilería, fontanería, pintura y más, adaptándonos a las necesidades de cada comunidad. Nuestro objetivo es garantizar espacios seguros, funcionales y agradables para todos los residentes, gestionando cada proyecto con profesionalidad y eficiencia."
+      imageSrc="/images/comunidades.webp"
+      imageAlt="Comunidades"
+      reverse={false}
+      id="comunidades"
+    />
+
+    <Service
+      title="Jardineria"
+      description="Ofrecemos servicios integrales de jardinería para crear y mantener espacios verdes que embellecen cualquier entorno. Desde el diseño y la creación de jardines hasta el mantenimiento regular, nos encargamos de cada aspecto para asegurar áreas exteriores saludables y atractivas. Nuestro equipo de profesionales utiliza técnicas avanzadas y productos sostenibles para cuidar césped, plantas, árboles y sistemas de riego, asegurando un equilibrio perfecto entre estética y funcionalidad."
+      imageSrc="/images/jardineria.webp"
+      imageAlt="Jardineria"
+      reverse={true}
+      id="jardineria"
+    />
+
+    <CallToAction />
+  </body>
 </Layout>

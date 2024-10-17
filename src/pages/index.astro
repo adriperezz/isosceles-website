@@ -1,32 +1,42 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import VideoBackground from '../components/Home/VideoBackground.astro';
-import ServicesApartado from '../components/Home/ServicesApartado.astro';
+import ServicesMiniApartado from '../components/Home/ServicesMiniApartado.astro';
 import ServicesMobileTitle from '../components/Home/ServicesMobileTitle.astro';
+import AboutUsApartado from '../components/Home/AboutUsApartado.astro';
+import NumbersApartado from '../components/Home/NumbersApartado.astro';
+import CallToAction from '../components/Global/CallToAction.astro';
+import ProcesoDistintivo from '../components/Home/ProcesoDistintivo.astro';
 ---
 
 <Layout title="Isósceles Global SL - Empresa de construcción">
   <main>
     <VideoBackground />
-    <div
-      class="relative w-full h-44 lg:h-96 bg-white lg:grid lg:grid-cols-3 divide-y-2 lg:divide-x-2 divide-gray-200"
-    >
-      <ServicesMobileTitle />
-      <ServicesApartado
-        title="Rehabilitación y reformas"
-        url="/rehabilitacion-reformas/"
-        foto="/reformas.webp"
-      />
-      <ServicesApartado
-        title="Obra nueva"
-        url="obra-nueva"
-        foto="/obranueva.webp"
-      />
-      <ServicesApartado
-        title="Otros servicios"
-        url="servicios"
-        foto="/servicios.webp"
-      />
+    <div class="relative w-full h-128 lg:h-96 bg-white">
+      <ServicesMobileTitle class="h-1/4" />
+      <div
+        class="h-3/4 lg:h-full flex flex-col lg:flex-row items-center justify-between divide-y-2 lg:divide-x-4 divide-gray-100"
+      >
+        <ServicesMiniApartado
+          title="Rehabilitación y reformas"
+          url="/rehabilitacion-reformas/"
+          foto="/images/reformas.webp"
+        />
+        <ServicesMiniApartado
+          title="Obra nueva"
+          url="obra-nueva"
+          foto="/images/obranueva.webp"
+        />
+        <ServicesMiniApartado
+          title="Otros servicios"
+          url="servicios"
+          foto="/images/servicios.webp"
+        />
+      </div>
     </div>
+    <AboutUsApartado />
+    <NumbersApartado />
+    <CallToAction bgColor="bg-gray-100" />
+    <ProcesoDistintivo />
   </main>
 </Layout>

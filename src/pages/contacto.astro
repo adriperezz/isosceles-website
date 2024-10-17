@@ -1,7 +1,81 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Form from '../components/Contact/Form';
+import Location from '../components/Contact/Location.astro';
+import { Icon } from 'astro-icon/components';
 ---
 
 <Layout title="Contacto - Isósceles Global SL">
-  <h1>Contacto</h1>
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="bg-blue-950 text-white py-8">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl font-bold">Contacto</h1>
+        <p class="mt-2 text-lg">
+          Estamos aquí para ayudarte. Ponte en contacto con nosotros para
+          resolver cualquier consulta.
+        </p>
+      </div>
+    </header>
+
+    <!-- Sección de Contacto -->
+    <section class="py-16">
+      <div class="container mx-auto px-10 md:px-4">
+        <div class="flex flex-col lg:flex-row items-start gap-12 w-full">
+          <!-- Columna de Formulario de Contacto -->
+          <div class="lg:w-1/2 w-full">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+              Formulario de Contacto
+            </h2>
+            <p class="text-lg text-gray-600 mb-6">
+              Rellena el siguiente formulario y nos pondremos en contacto
+              contigo lo antes posible.
+            </p>
+            <Form client:load />
+          </div>
+
+          <!-- Columna de Ubicación -->
+          <div class="lg:w-1/2 w-full">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+              Nuestra ubicación
+            </h2>
+            <p class="text-lg text-gray-600 mb-6">
+              Repartidos por múltiples localizaciones, la oficina central se
+              encuentra en:
+            </p>
+            <div
+              class="bg-white p-6 rounded-lg shadow-lg border-2 border-stone-100"
+            >
+              <div>
+                <h3 class="text-xl font-semibold text-blue-900 mb-4">
+                  Dirección
+                </h3>
+                <p class="text-gray-600 text-sm lg:text-lg">
+                  Lugar Mosteiro<br />
+                  36388, Gondomar, Pontevedra
+                </p>
+                <div class="w-full h-auto my-6 lg:my-4">
+                  <Location />
+                </div>
+              </div>
+              <div class="space-y-2">
+                <h3 class="text-xl font-semibold text-blue-900 mb-4 pt-2">
+                  Contáctanos
+                </h3>
+                <p class="text-gray-600 text-sm lg:text-lg">
+                  <Icon
+                    name="ic:baseline-phone"
+                    class="inline size-6 mr-2"
+                  />+34 912 345 678
+                </p>
+                <p class="text-gray-600 text-sm lg:text-lg">
+                  <Icon name="ic:baseline-email" class="inline size-6 mr-2" /> info@isoscelesglobal.com
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </Layout>

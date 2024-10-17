@@ -1,0 +1,143 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const pages = [
+  { name: '¿Quiénes somos?', path: '/quienes-somos/' },
+  { name: 'Rehabilitación y reformas', path: '/rehabilitacion-reformas/' },
+  { name: 'Obra nueva', path: '/obra-nueva/' },
+  { name: 'Servicios', path: '/servicios/' },
+  { name: 'Trabaja con nosotros', path: '/trabaja-nosotros/' },
+  { name: 'Contacto', path: '/contacto/' },
+];
+
+const services = [
+  { name: 'Rehabilitación y reforma', path: '/servicios/#rehabilitacion' },
+  { name: 'Obra Nueva', path: '/servicios/#obra-nueva' },
+  { name: 'Fontanería', path: '/servicios/#fontaneria' },
+  {
+    name: 'Impermeabilización y Fachadas',
+    path: '/servicios/#impermeabilizacion',
+  },
+  { name: 'Pintura', path: '/servicios/#pintura' },
+  { name: 'Carpintería', path: '/servicios/#carpinteria' },
+  { name: 'Carpintería Metálica', path: '/servicios/#carpinteria-metalica' },
+  { name: 'Electricidad', path: '/servicios/#electricidad' },
+  { name: 'Comunidades', path: '/servicios/#comunidades' },
+  { name: 'Jardinería', path: '/servicios/#jardineria' },
+];
+
+const contactInfo = {
+  phones: ['+34 123 456 789', '+34 987 654 321'],
+  email: 'contacto@isoscelesglobal.com',
+};
+---
+
+<footer class="text-white">
+  <div class="bg-blue-950 py-16 lg:py-20">
+    <div class="container mx-auto px-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Logo // CAMBIAR LOGO -->
+        <div class="flex items-start justify-center lg:justify-start">
+          <img
+            src="/favicon.svg"
+            alt="Isosceles Global Logo"
+            class="w-64 h-auto bg-white"
+          />
+        </div>
+
+        <!-- Sitio Web -->
+        <div>
+          <h3 class="text-lg font-bold mb-4">Sitio Web</h3>
+          <ul class="space-y-2 text-sm">
+            {
+              pages.map((page) => (
+                <li>
+                  <a
+                    href={page.path}
+                    class="text-gray-300 hover:text-gray-200 hover:underline decoration-gray-200"
+                  >
+                    {page.name}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+
+        <!-- Servicios // LINK DE TODOS LOS SERVICIOS -->
+        <div>
+          <h3 class="text-lg font-bold mb-4">Servicios</h3>
+          <ul class="space-y-2 text-sm">
+            {
+              services.map((service) => (
+                <li>
+                  <a
+                    href={service.path}
+                    class="text-gray-300 hover:text-gray-200 hover:underline decoration-gray-200"
+                  >
+                    {service.name}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+
+        <!-- Datos de contacto // CAMBIAR DATOS DE CONTACTO -->
+        <div>
+          <h3 class="text-lg font-bold mb-4">Datos de contacto</h3>
+          <ul class="space-y-2 text-sm">
+            {
+              contactInfo.phones.map((phone) => (
+                <li>
+                  <Icon name="ic:baseline-phone" class="inline mr-1" />
+                  <a
+                    href={`tel:${phone}`}
+                    class="text-gray-300 hover:text-gray-200 hover:underline decoration-gray-200"
+                  >
+                    {phone}
+                  </a>
+                </li>
+              ))
+            }
+            <li>
+              <Icon name="ic:baseline-mail" class="inline mr-1" />
+              <a
+                href={`mailto:${contactInfo.email}`}
+                class="text-gray-300 hover:text-gray-200 hover:underline decoration-gray-200"
+                >{contactInfo.email}</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Legal Section.
+  
+  ## FALTA PONER LINKS Y CREAR WEBS LEGALES ##
+  
+  -->
+  <div class="bg-white text-gray-800 py-4">
+    <div
+      class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center"
+    >
+      <ul
+        class="flex flex-wrap justify-center md:justify-start space-x-4 text-xs"
+      >
+        <li><a href="#" class="hover:underline">Aviso legal</a></li>
+        <li><a href="#" class="hover:underline">Política de privacidad</a></li>
+        <li><a href="#" class="hover:underline">Protección de datos</a></li>
+        <li><a href="#" class="hover:underline">Política de Cookies</a></li>
+      </ul>
+      <p class="text-center mt-2 md:mt-0 text-xs">
+        &copy; {new Date().getFullYear()} Isosceles Global SL | <a
+          href="https://www.linkedin.com/in/adrian-perez-macho"
+          target="_blank"
+          class="text-blue-950">Adrian Perez Macho</a
+        > was here :)
+      </p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,21 @@
+---
+import CifrasMiniApartado from './CifrasMiniApartado.astro';
+---
+
+<div class="py-16 lg:py-20">
+  <div class="container mx-auto px-4">
+    <h2
+      class="text-2xl md:text-4xl lg:text-5xl font-bold text-center mb-8 text-gray-800 lg:pb-6"
+    >
+      Nuestras cifras
+    </h2>
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center"
+    >
+      <CifrasMiniApartado cifra="17" texto="Años de experiencia" />
+      <CifrasMiniApartado cifra="650" texto="Trabajos realizados" />
+      <CifrasMiniApartado cifra="40" texto="Personas en el equipo" />
+      <CifrasMiniApartado cifra="99" texto="Satisfacción del cliente" />
+    </div>
+  </div>
+</div>

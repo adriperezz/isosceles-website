@@ -6,6 +6,9 @@ export default {
       height: {
         128: '40rem',
       },
+      textColor: {
+        DEFAULT: '#1f2937',
+      },
     },
   },
   plugins: [],

@@ -1,0 +1,17 @@
+---
+import CallAndIcon from '../Global/CallAndIcon.astro';
+const { bgColor } = Astro.props;
+---
+
+<div class=`py-16 ${bgColor}`>
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl lg:text-4xl font-bold text-center mb-8 text-gray-800">
+      ¿Alguna emergencia o proyecto? ¡Llámanos!
+    </h2>
+    <CallAndIcon
+      iconClass="size-6 md:size-8"
+      pClass="text-xl lg:text-3xl"
+      divClass="text-blue-900 font-bold"
+    />
+  </div>
+</div>

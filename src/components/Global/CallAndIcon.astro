@@ -1,0 +1,14 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const { iconClass, pClass, divClass } = Astro.props;
+---
+
+<div
+  class=`text-blue-900 flex ${divClass} items-center justify-center gap-2 text-center`
+>
+  <Icon name="ic:baseline-phone" class=`${iconClass} inline` />
+  <p class=`block sm:inline ${pClass}`>
+    <a href="tel:+34636857842">+34 636 857 842</a>
+  </p>
+</div>
