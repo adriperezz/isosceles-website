@@ -1,29 +1,55 @@
 ---
 interface Props {
   title: string;
+  description: string;
+  url: string;
+  image?: string;
 }
 
-const { title } = Astro.props;
+const { title, description, url, image } = Astro.props;
 import Header from '../components/Global/Header.astro';
 import Footer from '../components/Global/Footer.astro';
+import { AstroSeo } from '@astrolib/seo';
 ---
 
-<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/logos/isosceles-favicon-blue.svg"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="generator" content={Astro.generator} />
-    <script src="https://www.google.com/recaptcha/api.js"></script>
     <title>{title}</title>
+    <AstroSeo
+      title={title}
+      description={description}
+      canonical={url}
+      openGraph={{
+        type: 'website',
+        url: url,
+        title: title,
+        description: description,
+        images: [
+          {
+            url: image ? image : '/images/index.webp',
+            width: 1200,
+            height: 630,
+            alt: `${title} - Isosceles Global SL`,
+          },
+        ],
+      }}
+    />
   </head>
   <body>
     <Header />

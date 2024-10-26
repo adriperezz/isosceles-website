@@ -1,5 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components';
+import MobileHeader from './MobileHeader.astro';
 
 const currentPath = Astro.url.pathname;
 
@@ -13,19 +14,29 @@ const menuItems = [
 ];
 ---
 
-<header>
+<!--class="sticky top-0 left-0 right-0 z-40 bg-white backdrop-blur-sm bg-opacity-80" -->
+<header
+  class="sticky
+  top-0
+  left-0
+  right-0
+  z-40
+  bg-white
+  backdrop-blur-sm
+  bg-opacity-80"
+>
   <nav>
     <div
       class="flex justify-between items-center py-4 px-8 xl:px-14 text-xs xl:text-sm text-gray-800"
     >
-      <div>
-        <a href="/"
-          ><img
-            src="/favicon.svg"
+      <div class="flex-none">
+        <a href="/">
+          <img
+            src="/logos/isosceles-favicon-blue.svg"
             alt="Logo Isosceles Global"
             class="size-10"
-          /></a
-        >
+          />
+        </a>
       </div>
       <ul class="font-bold hidden lg:flex list-none gap-4 xl:gap-12">
         {
@@ -45,12 +56,15 @@ const menuItems = [
         class="lg:flex hidden bg-blue-900 py-3 px-6 text-white font-bold gap-2"
       >
         <Icon name="ic:baseline-phone" class="size-4 xl:size-5" />
-        <a href="tel:+34636857842" class="">+34 636 857 842</a>
+        <a href="tel:+34636857842">+34 636 857 842</a>
       </div>
-      <div class="lg:hidden">
-        <Icon name="ic:baseline-menu" class="size-10 text-blue-900" />
+      <div class="lg:hidden" id="menu-button">
+        <button class="baseline-menu-icon" aria-label="Toggle menu">
+          <Icon name="ic:baseline-menu" class="size-8 text-blue-950" />
+        </button>
       </div>
     </div>
-    <slot />
   </nav>
 </header>
+
+<MobileHeader />

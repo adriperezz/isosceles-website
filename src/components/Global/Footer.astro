@@ -27,8 +27,8 @@ const services = [
 ];
 
 const contactInfo = {
-  phones: ['+34 123 456 789', '+34 987 654 321'],
-  email: 'contacto@isoscelesglobal.com',
+  phones: ['+34 636 857 842', '+34 679 598 128'],
+  email: 'proyectos@isoscelesglobal.com',
 };
 ---
 
@@ -38,11 +38,13 @@ const contactInfo = {
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         <!-- Logo // CAMBIAR LOGO -->
         <div class="flex items-start justify-center lg:justify-start">
-          <img
-            src="/favicon.svg"
-            alt="Isosceles Global Logo"
-            class="w-64 h-auto bg-white"
-          />
+          <a href="/">
+            <img
+              src="/logos/isosceles-white.svg"
+              alt="Isosceles Global Logo"
+              class="w-64 h-auto"
+            />
+          </a>
         </div>
 
         <!-- Sitio Web -->
@@ -126,10 +128,22 @@ const contactInfo = {
       <ul
         class="flex flex-wrap justify-center md:justify-start space-x-4 text-xs"
       >
-        <li><a href="#" class="hover:underline">Aviso legal</a></li>
-        <li><a href="#" class="hover:underline">Política de privacidad</a></li>
-        <li><a href="#" class="hover:underline">Protección de datos</a></li>
-        <li><a href="#" class="hover:underline">Política de Cookies</a></li>
+        <li><a href="/aviso-legal/" class="hover:underline">Aviso legal</a></li>
+        <li>
+          <a href="/politica-privacidad/" class="hover:underline"
+            >Política de privacidad</a
+          >
+        </li>
+        <li>
+          <a href="/proteccion-datos/" class="hover:underline"
+            >Protección de datos</a
+          >
+        </li>
+        <li>
+          <a href="/politica-cookies/" class="hover:underline"
+            >Política de Cookies</a
+          >
+        </li>
       </ul>
       <p class="text-center mt-2 md:mt-0 text-xs">
         &copy; {new Date().getFullYear()} Isosceles Global SL | <a

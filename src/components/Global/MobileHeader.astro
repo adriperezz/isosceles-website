@@ -1,0 +1,97 @@
+---
+const currentPath = Astro.url.pathname;
+import { Icon } from 'astro-icon/components';
+import CallAndIcon from './CallAndIcon.astro';
+
+const menuItems = [
+  { name: '¿Quiénes somos?', path: '/quienes-somos/' },
+  { name: 'Rehabilitación y reformas', path: '/rehabilitacion-reformas/' },
+  { name: 'Obra nueva', path: '/obra-nueva/' },
+  { name: 'Servicios', path: '/servicios/' },
+  { name: 'Trabaja con nosotros', path: '/trabaja-nosotros/' },
+  { name: 'Contacto', path: '/contacto/' },
+];
+---
+
+<!-- MOBILE FULL SCREEN MENU -->
+<div
+  id="menu-mobile"
+  class="hidden fixed inset-0 w-screen h-screen bg-opacity-95 z-50 transition-opacity duration-300 bg-blue-950 backdrop-blur-sm text-white"
+>
+  <div
+    class="w-3/4 mx-auto h-full flex flex-col justify-center items-center gap-8 divide-y-2 divide-white"
+  >
+    <nav class="text-center w-full space-y-8">
+      <ul
+        class="font-bold list-none gap-8 w-full h-full flex flex-col justify-center items-center text-lg"
+      >
+        {
+          menuItems.map((item) => (
+            <li>
+              <a
+                href={item.path}
+                class={`hover:text-gray-300 ${
+                  currentPath === item.path
+                    ? 'text-gray-300 border-b-2 border-gray-300'
+                    : ''
+                }`}
+              >
+                {item.name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+    <div class="mx-auto items-center">
+      <div class="text-white text-left mt-10 space-y-2">
+        <div>
+          <Icon name="ic:baseline-phone" class="inline mr-1 size-6" />
+          <a href="tel:+34666666666" class="hover:text-gray-200 hover:underline"
+            >+34 666 666 666</a
+          >
+        </div>
+        <div>
+          <Icon name="ic:baseline-mail" class="inline mr-1 size-6" />
+          <a
+            href="mailto:info@isoscelesglobal.com"
+            class="hover:text-gray-200 hover:underline"
+            >info@isoscelesglobal.com</a
+          >
+        </div>
+      </div>
+      <img
+        src="/logos/isosceles-white.svg"
+        alt="Logo Isosceles Global SL"
+        class="size-56 mx-auto"
+      />
+    </div>
+  </div>
+
+  <!-- CLOSE MENU -->
+  <button
+    class="absolute top-6 right-8 text-white"
+    aria-label="Close menu"
+    id="close-button"
+  >
+    <Icon name="ic:baseline-close" class="size-8" />
+  </button>
+</div>
+
+<script>
+  const menuButton = document.getElementById('menu-button');
+  const menuMobile = document.getElementById('menu-mobile');
+  const closeButton = document.getElementById('close-button');
+
+  menuButton.addEventListener('click', () => {
+    menuMobile.classList.remove('hidden');
+    menuButton.classList.add('hidden');
+    document.body.classList.add('overflow-hidden');
+  });
+
+  closeButton.addEventListener('click', () => {
+    menuButton.classList.remove('hidden');
+    menuMobile.classList.add('hidden');
+    document.body.classList.remove('overflow-hidden');
+  });
+</script>

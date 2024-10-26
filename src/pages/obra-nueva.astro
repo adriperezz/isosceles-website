@@ -1,7 +1,168 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Icon } from 'astro-icon/components';
 ---
 
-<Layout title="Obra nueva - Isósceles Global SL">
-  <h1>Obra nueva</h1>
+<Layout
+  title="Obra Nueva - Isósceles Global Constructora"
+  description="Proyectos de obra nueva en Vigo. Construimos desde cero con los más altos estándares de calidad y compromiso con cada cliente."
+  url="https://www.isoscelesglobal.com/obra-nueva/"
+  image="/images/obra-nueva.webp"
+>
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="bg-blue-950 text-white py-8">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl font-bold">Obra nueva</h1>
+        <p class="mt-2 text-lg">
+          Construimos desde cero, gestionando cada fase del proyecto con
+          excelencia y compromiso.
+        </p>
+      </div>
+    </header>
+
+    <!-- Sección de Introducción -->
+    <section class="py-16 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+          <div class="md:w-1/2">
+            <h2
+              class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-800"
+            >
+              Proyectos de <span class="text-blue-900">obra nueva</span>
+            </h2>
+            <p class="text-lg md:text-xl text-gray-700 lg:mb-6">
+              En Isósceles Global SL, nos especializamos en proyectos de obra
+              nueva que abarcan desde viviendas residenciales hasta
+              infraestructuras comerciales. Nos encargamos de todo el proceso,
+              desde la planificación inicial hasta la entrega final, asegurando
+              que cada proyecto cumpla con los más altos estándares de calidad y
+              seguridad.
+            </p>
+          </div>
+          <div class="md:w-1/2">
+            <div class="w-full h-auto lg:h-96">
+              <img
+                src="/images/obra-nueva-1.webp"
+                alt="Construcción de obra nueva"
+                class="rounded-lg shadow-lg w-full h-full object-cover object-center"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Características del Servicio con Iconos -->
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <h2
+          class="text-2xl md:text-4xl lg:text-5xl font-bold text-center mb-12 text-gray-800"
+        >
+          Características del <span class="text-blue-900">servicio</span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Primer Bloque -->
+          <div
+            class="text-center p-6 lg:py-14 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border-2 border-stone-100"
+          >
+            <h3 class="text-xl font-semibold text-blue-900 mb-4">
+              Diseño Arquitectónico
+            </h3>
+            <p class="text-gray-600 text-lg">
+              Creación de proyectos arquitectónicos que combinan funcionalidad y
+              estética, diseñados para maximizar el espacio y la eficiencia.
+            </p>
+          </div>
+
+          <!-- Segundo Bloque -->
+          <div
+            class="text-center p-6 lg:py-14 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border-2 border-stone-100"
+          >
+            <h3 class="text-xl font-semibold text-blue-900 mb-4">
+              Gestión Integral del Proyecto
+            </h3>
+            <p class="text-gray-600 text-lg">
+              Coordinación completa de cada fase de la construcción, asegurando
+              un flujo de trabajo sin interrupciones y cumpliendo con plazos
+              establecidos.
+            </p>
+          </div>
+
+          <!-- Tercer Bloque -->
+          <div
+            class="text-center p-6 lg:py-14 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border-2 border-stone-100"
+          >
+            <h3 class="text-xl font-semibold text-blue-900 mb-4">
+              Materiales de Calidad
+            </h3>
+            <p class="text-gray-600 text-lg">
+              Selección de materiales de alta calidad que garantizan la
+              durabilidad, seguridad y sostenibilidad en cada proyecto.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Beneficios de Elegirnos -->
+    <section class="py-16 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <h2
+          class="text-2xl md:text-4xl lg:text-5xl font-bold text-center mb-12 text-gray-800"
+        >
+          ¿Por qué elegirnos para tu <span class="text-blue-900">proyecto</span>
+          de obra nueva?
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border-2 border-stone-100"
+          >
+            <Icon
+              name="ic:outline-security"
+              class="text-blue-900 text-4xl mb-4 mx-auto size-10 md:size-18"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-4">
+              Seguridad y calidad
+            </h3>
+            <p class="text-gray-600 text-lg">
+              Cada proyecto se ejecuta siguiendo rigurosos estándares de calidad
+              y seguridad para asegurar estructuras sólidas y duraderas.
+            </p>
+          </div>
+          <div
+            class="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border-2 border-stone-100"
+          >
+            <Icon
+              name="ic:baseline-schedule"
+              class="text-blue-900 text-4xl mb-4 mx-auto"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-4">
+              Cumplimiento de plazos
+            </h3>
+            <p class="text-gray-600 text-lg">
+              Respetamos los plazos establecidos para entregar tu proyecto a
+              tiempo, sin comprometer la calidad del trabajo.
+            </p>
+          </div>
+          <div
+            class="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border-2 border-stone-100"
+          >
+            <Icon
+              name="ic:baseline-support-agent"
+              class="text-blue-900 text-4xl mb-4 mx-auto"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-4">
+              Soporte integral
+            </h3>
+            <p class="text-gray-600 text-lg">
+              Te acompañamos en cada paso del proceso, desde la concepción del
+              proyecto hasta la entrega final, brindando asesoría experta y
+              atención personalizada.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </Layout>

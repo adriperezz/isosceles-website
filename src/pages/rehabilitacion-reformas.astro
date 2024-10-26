@@ -1,7 +1,156 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Icon } from 'astro-icon/components';
 ---
 
-<Layout title="Rehabilitación y reformas - Isósceles Global SL">
-  <h1>Rehabilitación y reformas</h1>
+<Layout
+  title="Rehabilitación y Reformas - Isosceles Global Constructora"
+  description="Especialistas en reformas integrales y rehabilitaciones en Vigo. Transformamos tu hogar o negocio con proyectos de alta calidad y eficiencia."
+  url="https://www.isoscelesglobal.com/rehabilitacion-reformas/"
+  image="/images/rehabilitacion-reformas-1.webp"
+>
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="bg-blue-950 text-white py-8">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl font-bold">Rehabilitación y reformas</h1>
+        <p class="mt-2 text-lg">
+          Renueva tus espacios con nuestras soluciones de reformas parciales e
+          integrales. Transformamos viviendas, oficinas y más.
+        </p>
+      </div>
+    </header>
+
+    <!-- Introducción -->
+    <section class="py-16 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+          <div class="md:w-1/2">
+            <h2
+              class="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-800"
+            >
+              Renovaciones y <span class="text-blue-900"
+                >reformas integrales</span
+              >
+            </h2>
+            <p class="text-lg md:text-xl text-gray-700 lg:mb-6">
+              Desde pequeñas mejoras hasta renovaciones completas, en Isosceles
+              Global SL nos especializamos en transformar espacios para
+              adaptarlos a tus necesidades y gustos. Nuestro equipo de expertos
+              se encarga de cada detalle, asegurando que el resultado final
+              supere tus expectativas.
+            </p>
+          </div>
+          <div class="md:w-1/2">
+            <div class="w-full h-auto lg:h-96">
+              <img
+                src="/images/rehabilitacion-reformas-1.webp"
+                alt="Reformas integrales y rehabilitaciones"
+                class="rounded-lg shadow-lg w-full h-full object-cover object-center"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Características del Servicio -->
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <h2
+          class="text-2xl md:text-4xl lg:text-5xl font-bold text-center mb-12 text-gray-800"
+        >
+          Características de nuestro <span class="text-blue-900"
+            >servicio único</span
+          >
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border-2 border-stone-100 text-center"
+          >
+            <Icon
+              name="mdi:home-modern"
+              class="text-blue-900 text-6xl mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Diseño personalizado
+            </h3>
+            <p class="text-gray-600 text-lg">
+              Creamos diseños adaptados a tus gustos y necesidades, asegurando
+              espacios funcionales y estéticamente agradables.
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border-2 border-stone-100 text-center"
+          >
+            <Icon
+              name="mdi:toolbox"
+              class="text-blue-900 text-6xl mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Materiales de calidad
+            </h3>
+            <p class="text-gray-600 text-lg">
+              Utilizamos los mejores materiales para garantizar durabilidad y
+              acabados impecables en cada proyecto de reforma.
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border-2 border-stone-100 text-center"
+          >
+            <Icon
+              name="mdi:clock-check"
+              class="text-blue-900 text-6xl mx-auto mb-4"
+            />
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">
+              Cumplimiento de plazos
+            </h3>
+            <p class="text-gray-600 text-lg">
+              Nos comprometemos a entregar el proyecto en el plazo acordado, sin
+              comprometer la calidad del trabajo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Beneficios de elegirnos -->
+    <section class="py-16 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <h2
+          class="text-2xl md:text-4xl lg:text-5xl font-bold text-center mb-12 text-gray-800"
+        >
+          ¿Por qué elegir nuestras <span class="text-blue-900">reformas?</span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div class="w-full h-96">
+            <img
+              src="/images/rehabilitacion-reformas-2.webp"
+              alt="Equipo trabajando en una reforma"
+              class="rounded-lg shadow-lg w-full h-full object-cover object-center"
+            />
+          </div>
+          <div class="flex flex-col justify-center">
+            <ul class="space-y-6 text-lg text-gray-700">
+              <li>
+                <strong class="text-blue-900">Experiencia Comprobada:</strong> Más
+                de 17 años de experiencia en el sector nos avalan.
+              </li>
+              <li>
+                <strong class="text-blue-900">Equipo Profesional:</strong> Contamos
+                con un equipo de profesionales cualificados para cada tipo de trabajo.
+              </li>
+              <li>
+                <strong class="text-blue-900">Asesoramiento Integral:</strong> Te
+                acompañamos desde la fase de diseño hasta la entrega final, asegurando
+                que cada detalle esté cuidado.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </Layout>

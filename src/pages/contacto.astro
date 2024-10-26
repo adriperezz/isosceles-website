@@ -5,7 +5,12 @@ import Location from '../components/Contact/Location.astro';
 import { Icon } from 'astro-icon/components';
 ---
 
-<Layout title="Contacto - Isósceles Global SL">
+<Layout
+  title="Contacto - Isósceles Global Constructora"
+  description="Contacta con Isosceles Global SL para más información sobre nuestros servicios de construcción y reformas en Vigo. ¡Estamos aquí para ayudarte!"
+  url="https://www.isoscelesglobal.com/contacto/"
+  image="/images/servicios.webp"
+>
   <body class="bg-gray-50 text-gray-800">
     <!-- Header -->
     <header class="bg-blue-950 text-white py-8">
@@ -31,7 +36,7 @@ import { Icon } from 'astro-icon/components';
               Rellena el siguiente formulario y nos pondremos en contacto
               contigo lo antes posible.
             </p>
-            <Form client:load />
+            <Form client:load templateID="template_cahypbj" />
           </div>
 
           <!-- Columna de Ubicación -->
@@ -63,13 +68,26 @@ import { Icon } from 'astro-icon/components';
                   Contáctanos
                 </h3>
                 <p class="text-gray-600 text-sm lg:text-lg">
-                  <Icon
-                    name="ic:baseline-phone"
-                    class="inline size-6 mr-2"
-                  />+34 912 345 678
+                  <a href="tel:+34636857842">
+                    <Icon
+                      name="ic:baseline-phone"
+                      class="inline size-6 mr-2"
+                    />+34 636 857 842</a
+                  >
                 </p>
                 <p class="text-gray-600 text-sm lg:text-lg">
-                  <Icon name="ic:baseline-email" class="inline size-6 mr-2" /> info@isoscelesglobal.com
+                  <a href="tel:+34679598128">
+                    <Icon
+                      name="ic:baseline-phone"
+                      class="inline size-6 mr-2"
+                    />+34 679 598 128</a
+                  >
+                </p>
+                <p class="text-gray-600 text-sm lg:text-lg">
+                  <Icon name="ic:baseline-email" class="inline size-6 mr-2" /><a
+                    href="mailto:proyectos@isoscelesglobal.com"
+                    >proyectos@isoscelesglobal.com</a
+                  >
                 </p>
               </div>
             </div>

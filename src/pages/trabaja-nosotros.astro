@@ -4,7 +4,12 @@ import Form from '../components/Contact/Form';
 import { Icon } from 'astro-icon/components';
 ---
 
-<Layout title="Trabaja con nosotros - Isósceles Global SL">
+<Layout
+  title="Trabaja con nosotros - Isósceles Global Constructora"
+  description='"Únete a Isosceles Global SL, una empresa de construcción líder en Vigo. Descubre nuestras oportunidades laborales y forma parte de nuestro equipo.'
+  url="https://www.isoscelesglobal.com/trabaja-nosotros/"
+  image="/images/aboutus.webp"
+>
   <body class="bg-gray-50 text-gray-800">
     <!-- Header -->
     <header class="bg-blue-950 text-white py-8">
@@ -106,7 +111,7 @@ import { Icon } from 'astro-icon/components';
               parte de nuestro equipo. Completa el formulario y nos pondremos en
               contacto contigo.
             </p>
-            <Form client:load />
+            <Form client:load templateID="template_t9xsow4" />
           </div>
         </div>
       </div>
