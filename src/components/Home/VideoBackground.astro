@@ -3,11 +3,22 @@ import CallAndIcon from '../Global/CallAndIcon.astro';
 ---
 
 <div class="relative max-w-full h-128 bg-black">
-  <video autoplay muted loop class="w-full h-full object-cover object-center">
+  <video
+    autoplay
+    muted
+    loop
+    class="w-full h-full object-cover object-center hidden lg:block"
+  >
     <source src="/videos/isosceles_video_bg.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
-  <div class="absolute inset-0 h-full w-full bg-black opacity-40"></div>
+  <img
+    src="/images/servicios.webp"
+    alt="Isosceles Global Constructora"
+    class="w-full h-full object-center object-cover"
+  />
+  <div class="absolute inset-0 h-full w-full bg-black opacity-60 lg:opacity-40">
+  </div>
   <div
     class="absolute inset-0 z-30 w-2/4 h-1/6 text-white text-center mt-16 mb-auto mx-auto"
   >
