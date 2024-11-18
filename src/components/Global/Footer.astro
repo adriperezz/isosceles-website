@@ -37,7 +37,9 @@ const contactInfo = {
     <div class="container mx-auto px-10">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         <!-- Logo // CAMBIAR LOGO -->
-        <div class="flex items-start justify-center lg:justify-start">
+        <div
+          class="flex items-start justify-center lg:justify-start order-last lg:order-first"
+        >
           <a href="/">
             <img
               src="/logos/isosceles-white.svg"
@@ -123,7 +125,7 @@ const contactInfo = {
   -->
   <div class="bg-white text-gray-800 py-4">
     <div
-      class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center"
+      class="container mx-auto px-4 space-y-2 lg:space-y-0 flex flex-col lg:flex-row justify-between items-center"
     >
       <ul
         class="flex flex-wrap justify-center md:justify-start space-x-4 text-xs"
