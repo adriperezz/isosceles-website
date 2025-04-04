@@ -6,10 +6,11 @@ const currentPath = Astro.url.pathname;
 
 const menuItems = [
   { name: '¿Quiénes somos?', path: '/quienes-somos/' },
-  { name: 'Rehabilitación y reformas', path: '/rehabilitacion-reformas/' },
   { name: 'Obra nueva', path: '/obra-nueva/' },
+  { name: 'Rehabilitación y reformas', path: '/rehabilitacion-reformas/' },
+  { name: 'SATE', path: '/sate/' },
   { name: 'Servicios', path: '/servicios/' },
-  { name: 'Trabaja con nosotros', path: '/trabaja-nosotros/' },
+  //{ name: 'Proyectos', path: '/proyectos/' },
   { name: 'Contacto', path: '/contacto/' },
 ];
 ---
@@ -38,7 +39,7 @@ const menuItems = [
           />
         </a>
       </div>
-      <ul class="font-bold hidden lg:flex list-none gap-4 xl:gap-12">
+      <ul class="font-bold hidden lg:flex list-none gap-4 xl:gap-8">
         {
           menuItems.map((item) => (
             <li>

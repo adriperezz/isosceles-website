@@ -1,14 +1,14 @@
 ---
 const currentPath = Astro.url.pathname;
 import { Icon } from 'astro-icon/components';
-import CallAndIcon from './CallAndIcon.astro';
 
 const menuItems = [
   { name: '¿Quiénes somos?', path: '/quienes-somos/' },
-  { name: 'Rehabilitación y reformas', path: '/rehabilitacion-reformas/' },
   { name: 'Obra nueva', path: '/obra-nueva/' },
+  { name: 'Rehabilitación y reformas', path: '/rehabilitacion-reformas/' },
+  { name: 'SATE', path: '/sate/' },
   { name: 'Servicios', path: '/servicios/' },
-  { name: 'Trabaja con nosotros', path: '/trabaja-nosotros/' },
+  //{ name: 'Proyectos', path: '/proyectos/' },
   { name: 'Contacto', path: '/contacto/' },
 ];
 ---
@@ -19,25 +19,27 @@ const menuItems = [
   class="hidden fixed inset-0 w-screen h-screen bg-opacity-95 z-50 transition-opacity duration-300 bg-blue-950 backdrop-blur-sm text-white"
 >
   <div
-    class="w-3/4 mx-auto h-full flex flex-col justify-center items-center gap-8 divide-y-2 divide-white"
+    class="w-3/4 mx-auto h-full flex flex-col justify-center items-center gap-8 divide-y-2 divide-white pb-[5%]"
   >
     <div>
-      <img
-        src="/logos/isosceles-white.svg"
-        alt="Logo Isosceles Global SL"
-        class="size-44 mx-auto -mb-3"
-      />
+      <a href="/">
+        <img
+          src="/logos/isosceles-white.svg"
+          alt="Logo Isosceles Global SL"
+          class="size-44 mx-auto -mb-3"
+        />
+      </a>
     </div>
-    <nav class="text-center w-2/3 space-y-8 pt-8">
+    <nav class="text-center w-full space-y-8 pt-8">
       <ul
-        class="font-bold list-none gap-5 w-full h-full flex flex-col justify-center items-center text-lg"
+        class="list-none gap-2 w-full h-full flex flex-col justify-center items-center text-lg"
       >
         {
           menuItems.map((item) => (
             <li>
               <a
                 href={item.path}
-                class={`hover:text-gray-300 ${
+                class={`hover:text-gray-300 hover:font-bold transition-all duration-150 ease-in${
                   currentPath === item.path
                     ? 'text-gray-300 border-b-2 border-gray-300'
                     : ''
@@ -50,11 +52,13 @@ const menuItems = [
         }
       </ul>
     </nav>
-    <div class="flex justify-center items-center w-2/3">
+    <div class="flex justify-center items-center w-full">
       <div class="text-white text-left mt-8 space-y-2">
         <div>
           <Icon name="ic:baseline-phone" class="inline mr-1 size-6" />
-          <a href="tel:+34636857842" class="hover:text-gray-200 hover:underline"
+          <a
+            href="tel:+34636857842"
+            class="hover:text-gray-200 hover:underline text-sm md:text-base"
             >+34 636 857 842</a
           >
         </div>
@@ -62,7 +66,7 @@ const menuItems = [
           <Icon name="ic:baseline-mail" class="inline mr-1 size-6" />
           <a
             href="mailto:info@isoscelesglobal.com"
-            class="hover:text-gray-200 hover:underline"
+            class="hover:text-gray-200 hover:underline text-sm md:text-base"
             >proyectos@isoscelesglobal.com</a
           >
         </div>

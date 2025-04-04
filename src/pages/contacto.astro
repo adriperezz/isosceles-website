@@ -7,7 +7,7 @@ import { Icon } from 'astro-icon/components';
 
 <Layout
   title="Contacto - Isósceles Global Constructora"
-  description="Contacta con Isosceles Global SL para más información sobre nuestros servicios de construcción y reformas en Vigo. ¡Estamos aquí para ayudarte!"
+  description="Contacta con Isosceles Global Constructora para más información sobre nuestros servicios de construcción y reformas en Vigo. ¡Estamos aquí para ayudarte!"
   url="https://www.isoscelesglobal.com/contacto/"
   image="/images/servicios.webp"
 >
@@ -56,8 +56,8 @@ import { Icon } from 'astro-icon/components';
                   Dirección
                 </h3>
                 <p class="text-gray-600 text-sm lg:text-lg">
-                  Lugar Mosteiro<br />
-                  36388, Gondomar, Pontevedra
+                  Porto do Molle, Rúa dos Padrons, Nave 2, Taller 1<br />
+                  36350, Nigrán, Pontevedra
                 </p>
                 <div class="w-full h-auto my-6 lg:my-4">
                   <Location />
@@ -91,6 +91,111 @@ import { Icon } from 'astro-icon/components';
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRABAJA CON NOSOTROS -->
+    <!-- Header -->
+    <section class="bg-blue-950 text-white py-8">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl font-bold">Trabaja con nosotros</h1>
+        <p class="mt-2 text-lg">
+          Únete a nuestro equipo y crece con nosotros. Descubre nuestras
+          vacantes y el proceso de selección.
+        </p>
+      </div>
+    </section>
+    <section class="py-16">
+      <div class="container mx-auto px-10 md:px-4">
+        <div class="flex flex-col lg:flex-row items-start gap-12 w-full">
+          <!-- Columna de Proceso de Selección -->
+          <div class="lg:w-1/2 w-full">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+              Proceso de Selección
+            </h2>
+            <p class="text-lg text-gray-600 mb-6">
+              Nuestro proceso de selección está diseñado para identificar a los
+              mejores candidatos de forma justa y efectiva.
+            </p>
+            <div
+              class="bg-white p-6 rounded-lg shadow-lg border-2 border-stone-100 space-y-6"
+            >
+              <div class="flex items-start">
+                <Icon
+                  name="ic:baseline-assessment"
+                  class="text-blue-900 size-6 md:size-8 mr-4 flex-none"
+                />
+                <div>
+                  <h3 class="text-lg md:text-xl font-semibold text-blue-900">
+                    1. Comienza el cambio ¡YA!
+                  </h3>
+                  <p class="text-gray-600 text-sm lg:text-lg">
+                    Si desea un cambio en su vida, aplica para trabajar en
+                    nuestra compañia y forma parte de un equipo de expertos.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <Icon
+                  name="ic:baseline-phone"
+                  class="text-blue-900 size-6 md:size-8 mr-4 flex-none"
+                />
+                <div>
+                  <h3 class="text-lg md:text-xl font-semibold text-blue-900">
+                    2. Entrevista Telefónica
+                  </h3>
+                  <p class="text-gray-600 text-sm lg:text-lg">
+                    Realizamos una breve llamada para conocerte mejor y resolver
+                    tus posibles dudas iniciales.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <Icon
+                  name="ic:baseline-groups"
+                  class="text-blue-900 size-6 md:size-8 mr-4 flex-none"
+                />
+                <div>
+                  <h3 class="text-lg md:text-xl font-semibold text-blue-900">
+                    3. Entrevista Personal
+                  </h3>
+                  <p class="text-gray-600 text-sm lg:text-lg">
+                    Una entrevista más detallada para profundizar en tus
+                    habilidades y conocimientos.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <Icon
+                  name="ic:baseline-check-circle"
+                  class="text-blue-900 size-6 md:size-8 mr-4 flex-none"
+                />
+                <div>
+                  <h3 class="text-lg md:text-xl font-semibold text-blue-900">
+                    4. Selección Final
+                  </h3>
+                  <p class="text-gray-600 text-sm lg:text-lg">
+                    El equipo de RRHH se pondrá en contacto contigo para
+                    comunicarte el resultado.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna de Formulario -->
+          <div class="lg:w-1/2 w-full">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+              Envíanos tu candidatura
+            </h2>
+            <p class="text-lg text-gray-600 mb-6">
+              Estamos buscando personas apasionadas y talentosas para formar
+              parte de nuestro equipo. Completa el formulario y nos pondremos en
+              contacto contigo.
+            </p>
+            <Form client:load templateID="template_t9xsow4" />
           </div>
         </div>
       </div>
